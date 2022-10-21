@@ -1,0 +1,4207 @@
+@font-face {
+    font-family: Poppins;
+    src: url("../font/Poppins_Font_Family/Poppins\ Medium\ 500.ttf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat/Montserrat-BlackItalic.ttf");
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    width: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+p span {
+    color: #292f33;
+}
+
+.borders {
+    border: 0.5px solid #292f33;
+    opacity: 1;
+}
+
+.borderss {
+    border-bottom: 0.5px solid #292f33;
+    opacity: 1;
+}
+
+.home_slider_page .border-left {
+    border-left: 1px solid #292f33 !important;
+}
+
+.anchros a {
+    color: #292f33;
+    text-decoration: none;
+}
+
+.anchros .active i {
+    color: #f22806;
+}
+
+.text {
+    text-align: left;
+    font: normal normal 600 15px / 18px Poppins;
+    letter-spacing: 0.7px;
+    color: #f22806;
+    text-transform: uppercase;
+}
+
+.text1 {
+    text-align: left;
+    font: normal normal 600 15px / 18px Poppins;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+
+/* flag css */
+
+.sl-nav {
+    display: inline;
+}
+
+.sl-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+
+.sl-nav li {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.sl-nav li ul {
+    display: none;
+}
+
+.sl-nav li:hover ul {
+    position: absolute;
+    top: 29px;
+    right: -15px;
+    display: block;
+    background: #fff;
+    width: 120px;
+    padding-top: 0px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sl-nav li:hover .triangle {
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    z-index: 10;
+    height: 14px;
+    overflow: hidden;
+    width: 30px;
+    background: transparent;
+}
+
+.sl-nav li:hover .triangle:after {
+    content: "";
+    display: block;
+    z-index: 20;
+    width: 15px;
+    transform: rotate(45deg) translateY(0px) translatex(10px);
+    height: 15px;
+    background: #fff;
+    border-radius: 2px 0px 0px 0px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sl-nav li ul li {
+    position: relative;
+    text-align: left;
+    background: transparent;
+    padding: 15px 15px;
+    padding-bottom: 0;
+    z-index: 2;
+    font-size: 15px;
+    color: #3c3c3c;
+}
+
+.sl-nav li ul li:last-of-type {
+    padding-bottom: 15px;
+}
+
+.sl-nav li ul li span {
+    padding-left: 5px;
+}
+
+.sl-nav li ul li span:hover,
+.sl-nav li ul li span.active {
+    color: #146c78;
+}
+
+.sl-flag {
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 15px;
+    height: 15px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+}
+
+.flag-de {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAAAPUlEQVQ4T+3HMQ0AIBTE0NOHM8x9B7hgh71bIWGieUvze1m7kHGBr/AVvsJX+EpmP5dV5/gKX+ErfIUvVDYcX2NMxQC8PAAAAABJRU5ErkJggg==");
+    background-size: cover;
+    background-position: center center;
+}
+
+.flag-usa {
+    background-size: cover;
+    background-position: center center;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAABhUlEQVQ4T2Ows82PjGixsc4LD2tysC/09Kjw8622tyuICG8u0w/cpGSCBzF4e1VmZkzw9anOzOj38a4KCW4IC22ECHYk1l9tn4gHMeTlTnZxLikvm+XiUpKW2hvgX+vnV5OVOQEoOGfOtv94AYOzU3Fd7XxHh6Lq6rlurqUx0W0J8Z1AnbW18yotonaYuOJBDBXls4A+bGpaBCTz86YEBtQCvVBSPAPIbY0oP1/aiAcxABU1Ny+2tclvbFjo5FgUF9uenNwNDLnmpkWEnV1TPRcY1O1tS4H6i4umA/0MDK2K8tlAwRqHpP1uoXgQKKraWpcClTY3LQZaCLQ5NaUX5OaWJY3++SeTC/AgBmA4AXUClUJs9ver8fKsAAYEUJCws4G21dXNB1oFdD/Qz8DQTk4C+bm2dn6DZ9bRiDQ8iAEYt8CoBpK5YBIYw0AEEZwSXX4oMB4PYoC6gCzAcDqrjGzEsMfen2xEmbMv1rSTjRi26dqRjShz9o2+6WQjBrSShQSkZAIADvW/HLrLY6cAAAAASUVORK5CYII=");
+}
+
+.flag_float {
+    display: inline;
+    float: left;
+}
+
+.wish {
+    font: normal normal bold 12px/18px Poppins;
+    letter-spacing: 2.16px;
+    color: #292f33;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.btnn {
+    background-color: #000;
+    color: #fff;
+    height: 29px;
+    width: 100px;
+    font-size: 10px;
+}
+
+#mydiv>.btn-default {
+    background: transparent;
+    display: inline-block;
+    width: 100%;
+}
+
+.products {
+    text-align: center;
+    font: normal normal normal 13px/15px Poppins;
+    letter-spacing: 2.34px;
+    color: #292f33;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.FONTS {
+    font: normal normal normal 13px / 18px Poppins;
+    letter-spacing: 1.34px;
+    color: #292f33;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.FONTS2 {
+    font: normal normal normal 13px / 18px Poppins;
+    color: #292f33;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.brder_right {
+    border-right: 1px solid #292f33 !important;
+}
+
+.brdrr {
+    padding: 0;
+    border-right: 1px solid #292f33 !important;
+}
+
+.dropdown-menu.show {
+    width: 100%;
+}
+
+#button {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 48px;
+    height: 216px;
+    background: #f22806 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 1px solid #f22806;
+}
+
+.span_box span {
+    background: #f22806 0% 0% no-repeat padding-box;
+    border: 1px solid #f22806;
+    float: right;
+    width: 48px;
+    height: 216px;
+    text-align: left;
+    font: normal normal bold 16px / 186px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.carousel-indicatorsss li {
+    text-indent: 0 !important;
+}
+
+.carousel {
+    position: unset;
+}
+
+.carousel-indicators {
+    position: absolute;
+    padding-left: 0;
+    top: 0;
+    right: 0;
+    left: auto;
+    margin-right: 0px;
+    z-index: 8;
+}
+
+#button1 {
+    background: #f0f0f0 no-repeat padding-box;
+    position: fixed;
+    top: 216px;
+    right: 0;
+    width: 48px;
+    height: 216px;
+    border: 1px solid #f0f0f0;
+}
+
+#button2 {
+    background: #f0f0f0 no-repeat padding-box;
+    position: fixed;
+    top: 432px;
+    right: 0;
+    width: 48px;
+    height: 216px;
+    border: 1px solid #f0f0f0;
+}
+
+#button1,
+#button2,
+#button3 span {
+    color: #000000 !important;
+}
+
+#button3 {
+    background: #f0f0f0 no-repeat padding-box;
+    position: fixed;
+    top: 648px;
+    right: 0;
+    width: 48px;
+    height: 216px;
+    border: 1px solid #f0f0f0;
+}
+
+#left_img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    /* height: 20%; */
+}
+
+
+/* slider section */
+
+.text_clr {
+    text-align: left;
+    font: normal normal bold 43px/55px Poppins;
+    letter-spacing: 0px;
+    color: #f22806;
+}
+
+.Text_para {
+    text-align: left;
+    font: normal 33px/50px Poppins;
+    letter-spacing: 0.26px;
+    color: #f22806;
+    opacity: 1;
+}
+
+.head_text {
+    text-align: left;
+    font: normal normal bold 43px/55px Poppins;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+
+/* text-align:center;
+letter-spacing:-3px;
+} */
+
+.position {
+    display: inline-block;
+    height: 42px;
+    position: relative;
+    width: 2.05em;
+    background: #fe4627 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    opacity: 1;
+    margin-left: 7px;
+}
+
+.digit {
+    width: 100%;
+    border-radius: 0.2em;
+    text-align: center;
+    font: normal normal 300 36px / 45px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+.countDiv {
+    display: inline-block;
+    width: 16px;
+    height: 1.6em;
+    position: relative;
+}
+
+.countDiv:before,
+.countDiv:after {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin-left: -3px;
+    top: 4px;
+    left: 14px;
+    content: "";
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+    background-color: #ffffff;
+    font-size: 21px;
+}
+
+.countDiv:after {
+    top: 0.9em;
+}
+
+
+/*-------------------------
+Simple reset
+
+
+/*-------------------------
+General Styles
+--------------------------*/
+
+.neww .list-inline-item:not(:last-child) {
+    margin-right: 110px;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    outline: none;
+    color: #303030;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*----------------------------
+Main Section
+-----------------------------*/
+
+#note {
+    color: #666666;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    width: 400px;
+}
+
+.ctimer {
+    background: #f22806 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.left_txt {
+    position: absolute;
+    font: normal normal bold 20px / 30px Poppins;
+    letter-spacing: 0px;
+    color: #262626;
+    opacity: 1;
+    top: 386px;
+    right: -21px;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+}
+
+.how_works {
+    font: normal normal bold 21px/31px Poppins;
+    letter-spacing: 1.03px;
+    color: #363637;
+    opacity: 1;
+    margin-left: 14px;
+}
+
+
+/* coming soon section */
+
+.coming_soon {
+    background-color: #efefef;
+    /* padding: 120px 90px; */
+}
+
+.coming_soon h2 {
+    text-align: left;
+    font: normal normal bold 90px/78px Poppins;
+    letter-spacing: 1.8px;
+    color: #262626;
+    opacity: 1;
+}
+
+.div_timer i {
+    background-color: #fff;
+}
+
+.footer_txtx {
+    font: normal normal 600 25px/25px Poppins;
+    letter-spacing: 0px;
+    color: #5C5B5B;
+    opacity: 1;
+}
+
+
+/* slider owl */
+
+.div_timer {
+    background: #f83615 0% 0% no-repeat padding-box;
+    border-radius: 9px;
+    font: normal normal bold 15px / 66px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    position: relative;
+    top: 32px;
+    z-index: 1;
+    text-align: center;
+    width: 75%;
+}
+
+.btttnn a {
+    background-color: rgba(255, 225, 225, 0.41);
+    border-radius: 53px;
+    color: #000;
+    border: 0px;
+}
+
+.home_slider_page .text-right a {
+    color: #fff;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    opacity: 1;
+    width: 5%;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    background: #303030 0% 0% no-repeat padding-box;
+}
+
+
+/* .owl-dots {
+  display: inline;
+} */
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.item {
+    display: none;
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.item.show {
+    display: inline;
+    transition-duration: 0.4s;
+}
+
+@media screen and (max-width: 999px) {
+    .next,
+    .prev {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .item {
+        display: block !important;
+    }
+}
+
+.get_chance {
+    font: italic normal bold 18px/30px Poppins;
+    letter-spacing: 0px;
+    color: #ff0000;
+    opacity: 1;
+}
+
+.get_chance_one {
+    font: italic normal bold 18px/30px Poppins;
+    letter-spacing: 0px;
+    color: #ff0000;
+    opacity: 1;
+}
+
+.worth {
+    text-align: left;
+    font: normal medium 15px/108px Poppins;
+    letter-spacing: 0px;
+    color: #333333;
+    font-style: italic;
+}
+
+.aed {
+    font: italic normal bold 15px Poppins;
+    letter-spacing: 0px;
+    color: #333333;
+}
+
+.pen {
+    font: normal 12px Poppins;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+}
+
+.AD {
+    font: italic normal bold 25px/68px Poppins;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+}
+
+.deal_btn {
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    width: 50%;
+}
+
+.timer_left {
+    position: absolute;
+    left: -16px;
+    height: 216px;
+    border: 1px solid #303030;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+}
+
+circle {
+    fill: transparent;
+    stroke: #f22806;
+    stroke-width: 3;
+}
+
+.solid {
+    stroke-dasharray: none;
+}
+
+.dashed {
+    stroke-dasharray: 10, 15;
+}
+
+.dotted {
+    stroke-dasharray: 0.1, 12.5;
+    stroke-linecap: round;
+}
+
+.circle_text {
+    font: normal 600 13px/98px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.home_slider_page .btn-primary:hover {
+    color: #fff;
+    background-color: #303030;
+    border-color: #303030;
+}
+
+.heart {
+    background: #303030 0% 0% no-repeat padding-box;
+    border: 0.5px solid #707070;
+    border-radius: 3px;
+    opacity: 1;
+    padding: 10px;
+    color: #fff;
+}
+
+
+/* hello sec */
+
+.bg_clr_hello {
+    background: #f9b700 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.bg_clr_hello h2 {
+    text-align: left;
+    font: normal normal 600 49px/59px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: #ccc;
+    border: 3px solid #ffffff;
+    border-radius: 6px;
+    opacity: 1;
+    color: #fff;
+}
+
+.downLoad {
+    text-align: left;
+    padding: 6px;
+    font: normal normal 600 19px /57px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.bg_clr_points {
+    background: #06cbf2 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.bg_clr_points h2 {
+    text-align: left;
+    font: normal normal 600 43px/59px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.currnt_deals {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding: 50px 10px 0px 80px;
+}
+
+
+/* current deals */
+
+.currnt_deals h2 {
+    text-align: left;
+    font: normal normal 800 120px/140px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.current_dealSBox {
+    background: #fcf4f4 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #e6e5e5;
+    border-radius: 62px;
+    opacity: 1;
+}
+
+.heart2 {
+    border-radius: 3px;
+    opacity: 1;
+    padding: 10px;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 29px;
+}
+
+.timer_left_deals {
+    position: absolute;
+    height: 321px;
+    left: -48px;
+    border: 1px solid #303030;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    top: 123px;
+}
+
+.get_chance {
+    text-align: left;
+    font: italic normal normal 40px/45px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.get_chance_bld {
+    text-align: left;
+    font: normal 800 39px/80px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.buy_Pencil {
+    font: italic normal 600 30px/40px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.prize_detail {
+    font: italic normal 30px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    /* width: 50%; */
+    text-align: center;
+}
+
+.cart {
+    font: italic normal 30px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    background: #f22806 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    border-radius: 4px;
+    opacity: 1;
+    /* width: 50%; */
+    text-align: center;
+    border: 0px;
+    opacity: 1;
+}
+
+.closed {
+    font: italic normal 800 49px/152px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.ctimer_deals {
+    background: #f22806 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    position: relative;
+    bottom: 44px;
+}
+
+.float_text {
+    display: inline;
+    float: right;
+}
+
+.font_text_sty {
+    text-align: center;
+    font: normal normal 30px /0px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.position_2 {
+    display: inline-block;
+    height: 42px;
+    position: relative;
+    width: 5.05em;
+    background: #fe4627 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    opacity: 1;
+    margin-left: 7px;
+}
+
+
+/* gold section */
+
+.goldd {
+    text-align: center;
+    font: italic normal 600 28px/60px Montserrat;
+    letter-spacing: 0px;
+    color: #ed4a2f;
+}
+
+.goldd2 {
+    text-align: center;
+    font: italic normal 800 48px/60px Montserrat;
+    letter-spacing: 0px;
+    color: #ed4a2f;
+}
+
+
+/* digist */
+
+
+/* .otc {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+} */
+
+.otc fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.otc fieldset div {
+    display: flex;
+    align-items: center;
+}
+
+.otc legend {
+    margin: 0 auto 1em;
+    color: #5555ff;
+}
+
+input[type="number"] {
+    width: 100%;
+    text-align: center;
+    -webkit-appearance: textfield;
+    border: 2px solid #d4d0d0;
+    background: #d4d0d0 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    margin: 0px 10px 0px 0px;
+    height: 88px;
+    opacity: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* 2 group of 3 items */
+
+input[type="number"]:nth-child(n+4) {
+    order: 2;
+}
+
+
+/* .otc div::before {
+  content: "";
+  height: 2px;
+  width: 24px;
+  margin: 0 0.25em;
+  order: 1;
+  background: #bbbbff;
+} */
+
+.get_chance1 {
+    font: italic normal normal 31px / 52px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.hurry {
+    font: bold 19px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.position3 {
+    display: inline-block;
+    height: 42px;
+    position: relative;
+    background: #fe4627 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    opacity: 1;
+    margin-left: 7px;
+}
+
+.countDiv1 {
+    display: inline-block;
+    width: 16px;
+    height: 23px;
+    position: relative;
+}
+
+.countDiv {
+    display: inline-block;
+    width: 16px;
+    height: 23px;
+    position: relative;
+}
+
+.closed1 {
+    font: italic normal 800 22px / 123px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.sec .list-inline-item:not(:last-child) {
+    margin-right: 164px;
+}
+
+
+/* winners */
+
+.winner_bg {
+    background: #303030 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 83px;
+    opacity: 1;
+    padding: 60px;
+    border-radius: 47px 47px 0px 0px;
+}
+
+.winners {
+    text-align: left;
+    font: italic normal 900 130px/113px Montserrat;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+
+/* winners slieder */
+
+.blog .carousel-indicators {
+    left: 0;
+    top: auto;
+    bottom: -40px;
+}
+
+
+/* The colour of the indicators */
+
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+    background: #707070;
+}
+
+.producss {
+    background: #f83615 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.winn {
+    font: normal normal normal 43px / 74px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.boxx {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 57px;
+    opacity: 1;
+}
+
+.boxx h3 {
+    font: italic normal 900 20px/67px Montserrat;
+    letter-spacing: 0px;
+    color: #ed4a2f;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.boxx p {
+    font: italic normal normal 15px Montserrat;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.winn_gold {
+    text-align: center;
+    font: normal normal bold 26px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+
+/* footer css */
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    min-height: 250px;
+    padding: 44px 0px 21px 0px;
+    color: #808080;
+}
+
+.pt2 {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #808080;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.mb10 {
+    padding-bottom: 15px;
+}
+
+.footer_ul_amrc {
+    margin: 0px;
+    list-style-type: none;
+    font-size: 14px;
+    padding: 0px 0px 10px 0px;
+}
+
+.footer_ul_amrc li {
+    padding: 0px 0px 5px 0px;
+}
+
+.footer_ul_amrc li a {
+    color: #808080;
+}
+
+.footer_ul_amrc li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fleft {
+    float: left;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+.footer_ul2_amrc {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer_ul2_amrc li p {
+    display: table;
+}
+
+.footer_ul2_amrc li a:hover {
+    text-decoration: none;
+}
+
+.footer_ul2_amrc li i {
+    margin-top: 5px;
+}
+
+.bottom_border {
+    border-bottom: 1px solid #323f45;
+    padding-bottom: 20px;
+}
+
+.foote_bottom_ul_amrc {
+    list-style-type: none;
+    padding: 0px;
+    display: table;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    /* margin-left: auto; */
+}
+
+.foote_bottom_ul_amrc li {
+    display: inline;
+}
+
+.foote_bottom_ul_amrc li a {
+    color: #808080;
+    margin: 0 12px;
+}
+
+.social_footer_ul {
+    display: table;
+    margin: 15px auto 0 auto;
+    list-style-type: none;
+}
+
+.social_footer_ul li {
+    padding-left: 20px;
+    padding-top: 10px;
+    float: left;
+}
+
+.social_footer_ul li a {
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.social_footer_ul li i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.headin5_amrc {
+    font: normal normal 900 25px/29px Poppins;
+    letter-spacing: 0px;
+    color: #6c6a6a;
+    opacity: 1;
+}
+
+.first_sec .list-inline-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.boxxxxx {
+    background: #f6f1f1 0% 0% no-repeat padding-box;
+    border-radius: 62px;
+    opacity: 0.88;
+}
+
+.sold_outt {
+    position: relative;
+    top: 54px;
+    z-index: 1;
+}
+
+.apple_txt {
+    text-align: center;
+    font: italic normal 800 20px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.chance {
+    text-align: center;
+    font: italic normal normal 28px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.div_timer_deals {
+    background: #f83615 0% 0% no-repeat padding-box;
+    border-radius: 9px;
+    font: normal normal bold 10px /66px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+    text-align: center;
+    width: 75%;
+}
+
+.position_4 {
+    position: relative;
+    width: 100%;
+    /* background: #fe4627 0% 0% no-repeat padding-box; */
+    border-radius: 1px;
+    opacity: 1;
+}
+
+.ctimer_deal_3 {
+    background: #f22806 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    position: relative;
+    bottom: 26px;
+}
+
+.digit_deals {
+    width: 100%;
+    border-radius: 0.2em;
+    text-align: center;
+    font: normal normal 300 28px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+.list_type .list-inline-item:not(:last-child) {
+    margin-right: 27px;
+}
+
+.ctimer_1 {
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+
+/* Change navbar styling on scroll */
+
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #faf7f7;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #555;
+    }
+}
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+
+/* media query */
+
+@media only screen and (max-width: 991px) {
+    .mobile_view {
+        display: none;
+    }
+    #left_img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1366) {
+    .desktop_none {
+        display: none;
+    }
+}
+
+.desktop_none .fixed-top {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    top: -4px;
+}
+
+
+/* Guess and win page */
+
+.select_text {
+    font: normal 40px/106px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.lucky_num li {
+    background: #f22806 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    color: #ffff;
+    padding: 5px;
+    font: normal normal 600 40px / 102px Poppins;
+    width: 10%;
+    text-align: center;
+}
+
+.Guess_win .list-inline-item:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.try_luck {
+    font: normal normal bold 30px/50px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+
+/* .Guess_win,
+.bg_color {
+    background-color: #FAF7F7;
+} */
+
+.guesswinn {
+    background: #F22806 0% 0% no-repeat padding-box;
+    border: 1px solid #E6E5E5;
+    opacity: 1;
+    border-radius: 37px 0px 0px 37px;
+    box-shadow: 0px 3px 10px #00000052;
+}
+
+.hurry_upp {
+    text-align: center;
+    font: normal normal bold 25px/33px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.days li {
+    color: #fff;
+}
+
+.lucky_num_1 {
+    border-radius: 5px;
+    opacity: 1;
+    color: #ffff;
+    padding: 5px;
+    font: normal normal 600 40px / 102px Poppins;
+    width: 10%;
+    display: inline;
+}
+
+.try_luck1 {
+    font: italic normal 36px/120px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.Deals_win {
+    font: italic normal 800 90px/60px Poppins;
+    letter-spacing: 0px;
+    color: #FF1900 !important;
+    opacity: 1;
+}
+
+.guess_dealSBox2 {
+    background: #fcf4f4 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #e6e5e5;
+    border-radius: 62px;
+    opacity: 1;
+    border-radius: 0px 37px 37px 0px;
+}
+
+.share_left i {
+    color: #d0cfd1;
+    font-size: 39px;
+    line-height: 50px;
+}
+
+.aed12 {
+    text-align: center;
+    font: italic normal 800 48px /60px Montserrat;
+    letter-spacing: 0px;
+}
+
+.worth_dollar {
+    text-align: center;
+    font: italic normal 600 28px/60px Montserrat;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.timer_left_deals_win {
+    position: absolute;
+    height: 321px;
+    border: 1px solid #303030;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    top: 123px;
+    right: 0;
+}
+
+.win_deals .timer_left_deals_win {
+    position: absolute;
+    height: 321px;
+    border: 1px solid #303030;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    /* top: 376px; */
+    right: -32px;
+}
+
+.closes {
+    font: normal normal 800 50px/54px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.shop_txt {
+    font: normal normal 600 33px/40px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.shop_txt1 {
+    font: normal normal 300 33px/40px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.price_1 {
+    font: normal normal bold 45px/49px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.view_detail {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    opacity: 1;
+    padding: 15px;
+    font: normal normal 600 17px/26px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    border: 0px;
+    width: 50%;
+}
+
+.bg_closing {
+    background-color: #FFEEEE;
+    margin: 0px;
+}
+
+.hot_deals {
+    background: #FF0000;
+    width: 50%;
+    border-radius: 36px;
+    font: normal normal 600 14px/21px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    border: 0;
+}
+
+.bg_closing_2 {
+    background-color: #f6f6f6;
+    margin: 0px;
+}
+
+
+/* Guess and win page endss */
+
+
+/* guess page 3 css starts */
+
+.guess_three_page {
+    background: #FCF4F4 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    opacity: 1;
+}
+
+.get_chance {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.apple_bold {
+    text-align: center;
+    font: italic normal 800 35px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.right_shirt {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #707070;
+    border-radius: 20px;
+    opacity: 1;
+    float: right;
+    margin-top: 17px;
+    padding: 14px;
+}
+
+.watch_Img img {
+    position: relative;
+    left: 243px;
+    top: -201px;
+}
+
+.get_a_chance {
+    font: italic normal 600 32px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.right_Aed {
+    float: right;
+    font: normal normal 800 80px/120px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+    /* padding: 14px; */
+}
+
+.timer_left_deals_3 {
+    position: absolute;
+    height: 266px;
+    border: 1px solid #303030;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    top: 209px;
+    right: -27px;
+}
+
+
+/* tabs csss */
+
+#nav-tab a {
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 51px;
+    opacity: 1;
+    color: #fff;
+}
+
+#tabs_sec .nav-tabs {
+    border-bottom: 0px;
+    width: 445px;
+    font: normal normal 600 17px/28px Poppins;
+}
+
+.hoodie {
+    font: normal normal bold 45px/53px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.hoodie_sp {
+    font: normal normal 300 44px/69px Poppins;
+    letter-spacing: 2.64px;
+    color: #C7C7C7;
+    opacity: 1;
+}
+
+.counter_price {
+    font: normal normal 800 80px/120px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+    opacity: 1;
+}
+
+.btn_blk {
+    background: #303030 0% 0% no-repeat padding-box !important;
+    border: 2px solid #303030;
+    border-radius: 13px;
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+}
+
+.span_texts input {
+    text-align: center;
+    font: normal normal 600 39px/50px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.guess_three_page .btn.disabled,
+.btn:disabled {
+    opacity: 1;
+}
+
+.next_btn button {
+    background: #F22806 0% 0% no-repeat padding-box !important;
+    border: 1px solid #D8D8D8;
+    border-radius: 13px;
+    opacity: 1;
+    padding: 20px;
+    font: italic normal 20px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+
+/* guess page 4 css */
+
+.form_seclect {
+    border: 0px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    text-align: center;
+    font: normal normal bold 59px/89px Poppins;
+    letter-spacing: 0px;
+    color: #797979;
+    opacity: 1;
+    width: 16%;
+}
+
+.form_seclect_2 {
+    border: 0px;
+    background: #f4f804 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    text-align: center;
+    font: normal normal bold 59px/89px Poppins;
+    letter-spacing: 0px;
+    color: #797979;
+    opacity: 1;
+    width: 16%;
+}
+
+.guess_four,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.size_txt {
+    font: normal normal normal 54px/81px Poppins;
+    letter-spacing: 0px;
+    color: #797979;
+    opacity: 1;
+}
+
+.size_txt i {
+    font-size: 59px;
+    line-height: 81px;
+    opacity: 1;
+    color: #D9D9D9;
+}
+
+.lucky_draw {
+    text-align: left;
+    font: italic normal 800 59px/59px Poppins;
+    letter-spacing: 0px;
+    color: #303030;
+}
+
+.btnn_bnxt button {
+    background: #D8D8D8 0% 0% no-repeat padding-box !important;
+    color: #000;
+}
+
+.circle {
+    border-radius: 50%;
+    line-height: 63px;
+    border: 3px solid #EE5335;
+    opacity: 1;
+    width: 72px;
+    height: 72px;
+    font-size: 31px;
+    font-weight: normal;
+}
+
+.clear_all button {
+    text-align: left;
+    font: normal normal 200 48px/96px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: lowercase;
+    opacity: 1;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.luckyy_bxxo {
+    background: #313030 0% 0% no-repeat padding-box;
+    border-radius: 200px;
+    opacity: 1;
+}
+
+.btn_lucky button {
+    text-align: center;
+    font: normal normal 600 36px/66px Poppins;
+    background: #413F3F 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    border: 0px;
+    margin: 10px 10px 10px 10px;
+}
+
+
+/* div.cn {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: gray;
+} */
+
+div.inner {
+    position: absolute;
+    left: 30%;
+    background: #F83615 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    opacity: 1;
+    padding: 1rem;
+}
+
+.inner span {
+    font: italic normal bold 60px/135px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+
+/* guess page 4 css  ends*/
+
+
+/* current deals pages css */
+
+.Closing_in {
+    font: italic normal 900 50px/78px Montserrat;
+    letter-spacing: 0px;
+    color: #5F5C5C;
+    opacity: 1;
+    text-align: center;
+}
+
+.current_deals_2 .ctimer_deals {
+    padding: 10px !important;
+    width: 100%;
+    bottom: 2px;
+}
+
+.current_deals_2 .list-inline-item:not(:last-child) {
+    margin-right: 36px !important;
+}
+
+.current_deals_2 .deals_2 {
+    text-align: -webkit-center;
+}
+
+
+/* current deals pages css */
+
+
+/* carr page css */
+
+.cart_sh {
+    font: normal normal 600 23px/45px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.table_clr {
+    background: #F83615 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.table_clr th {
+    text-align: left;
+    font: normal normal 600 30px/45px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.clr_code {
+    font: normal normal 300 25px/45px Poppins;
+    letter-spacing: 0px;
+    color: #C4C4C4;
+    opacity: 1;
+}
+
+.h2_head {
+    font: normal normal 600 19px/22px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.borderr_img {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+    padding: 10px
+}
+
+.donate a {
+    text-align: left;
+    font: normal normal normal 15px/20px Poppins;
+    letter-spacing: 0px;
+    opacity: 1;
+    color: #C4C1CA;
+}
+
+.coupons {
+    font: normal normal normal 15px/20px Poppins;
+    letter-spacing: 0px;
+    color: #EE5435;
+}
+
+.guess_wn {
+    text-align: left;
+    font: normal normal 600 35px/22px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.GUSSS_bt {
+    background: #F83615 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    COLOR: #FFF;
+}
+
+.check_btn button {
+    background: none;
+}
+
+.chk_inpt input {
+    border: 0px;
+}
+
+.prducts_txt span {
+    font: normal normal bold 45px/45px Poppins;
+    letter-spacing: 0px;
+    color: #363637;
+}
+
+.bg_brdrr {
+    background: #FCF4F4 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 29px;
+    text-align: center;
+}
+
+.bg_brdrr p {
+    text-align: center;
+    font: normal normal 600 15px/20px Poppins;
+    letter-spacing: 0px;
+    color: #3B302E;
+    opacity: 1;
+}
+
+
+/* The radio */
+
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+/* Hide the browser's default radio button */
+
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkround {
+    position: absolute;
+    top: 6px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: 3px solid #2E2C2C;
+    opacity: 1;
+    left: 97px;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.radio input:checked~.checkround {
+    background-color: #fff;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkround:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.radio input:checked~.checkround:after {
+    display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.radio .checkround:after {
+    left: 5px;
+    top: 5px;
+    width: 32px;
+    height: 33px;
+    background: #FF4D2E 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.bg_brdrr img {
+    position: relative;
+    top: 20px
+}
+
+.check_out .table td,
+.table th {
+    padding: 0.75rem;
+    vertical-align: middle;
+    /* border-top: 1px solid #dee2e6; */
+    border: 0px;
+}
+
+.aed_dolar span {
+    text-align: left;
+    font: normal normal bold 40px/60px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.aed_dolarsss {
+    text-align: left;
+    font: normal normal bold 40px/60px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.countine {
+    font: normal normal 600 20px/45px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.sec_arr {
+    padding-top: 100px;
+}
+
+.tc {
+    text-align: left;
+    font: normal normal 300 40px/60px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.pricee {
+    font: normal normal 600 40px/60px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.check_otbt button {
+    background: #F83615 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    font: normal normal 600 15px/23px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: 0px;
+    padding: 10px 25px 10px 25px;
+    margin-top: 10px;
+}
+
+
+/* The check */
+
+.check {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-color: #f8204f;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.check input:checked~.checkmark {
+    background-color: #fff;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.check input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.check .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid;
+    border-color: #f8204f;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cust-btn {
+    margin-bottom: 10px;
+    background-color: #f8204f;
+    border-width: 2px;
+    border-color: #f8204f;
+    color: #fff;
+}
+
+.cust-btn:hover {
+    border-color: #f8204f;
+    background-color: #fff;
+    color: #f8204f;
+    border-radius: 20px;
+    transform-style: 2s;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #969494;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #F83615;
+}
+
+.address {
+    font: normal normal 600 26px/51px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.bg_delier {
+    background: #FF4D2E 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    opacity: 1;
+}
+
+.bg_deliveryy {
+    background: #eeeeee 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    opacity: 1;
+}
+
+.deliver_txt span {
+    font: normal normal 600 22px/82px Poppins;
+    letter-spacing: 0.01px;
+    color: #848484;
+}
+
+.input_filed input {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #808080;
+    border-radius: 14px;
+    opacity: 1;
+}
+
+.input_lebele label {
+    font: normal normal 600 28px/48px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.input_lebele select {
+    width: 100% !important;
+    height: auto !important;
+    padding: 18px;
+    border: 1px solid #808080;
+    border-radius: 14px;
+    opacity: 1;
+}
+
+.save_add input {
+    height: 50px;
+}
+
+.input_lebele .form-check {
+    margin-top: 63px;
+}
+
+.check_outtt button {
+    background: #ffff 0% 0% no-repeat padding-box;
+    border: 2px solid #D8D8D8;
+    border-radius: 50px;
+    font: normal normal 600 23px/34px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 18px;
+}
+
+.check_outtt1 button {
+    background: #F83615 0% 0% no-repeat padding-box;
+    border: 2px solid #D8D8D8;
+    border-radius: 50px;
+    font: normal normal 600 23px/34px Poppins;
+    letter-spacing: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 18px;
+    margin-left: 25px;
+}
+
+
+/* paymeent page css */
+
+.table_clr_blk {
+    background: #222222 0% 0% no-repeat padding-box;
+    border: 2px solid #BDBCBC;
+    border-radius: 15px !important;
+    font: normal normal 600 40px/60px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.visa_bg {
+    background: #F83615 0% 0% no-repeat padding-box;
+    border-radius: 69px;
+}
+
+.visa_bg_1 {
+    background: #FFF5F3 0% 0% no-repeat padding-box;
+    border: 0.5px solid #DCDCDC;
+    border-radius: 62px;
+}
+
+.credit_txt {
+    font: normal normal 600 46px/54px Poppins;
+    letter-spacing: 0px;
+    color: #3B3A3A;
+    opacity: 1;
+}
+
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #DDDDDD;
+    width: 100%;
+    font: normal normal normal 72px/128px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+input:focus {
+    border-color: #DDDDDD;
+}
+
+.frm_gr label {
+    text-align: left;
+    font: normal normal normal 57px/130px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.frm_gr img {
+    position: absolute;
+    bottom: 325px;
+    right: 0px;
+}
+
+.save_card {
+    font: normal normal normal 35px/23px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.check_outtt23 button {
+    background: #ffff 0% 0% no-repeat padding-box;
+    font: normal normal 600 20px/34px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    padding: 18px;
+    border: 3px solid #8D8D8D;
+    border-radius: 9px;
+    width: 100%;
+}
+
+.pay_now .check_outtt1 button {
+    width: 100%;
+    border: 2px solid #D8D8D8;
+    font: normal normal 600 23px/34px Poppins;
+    letter-spacing: 0px;
+    padding: 18px;
+    margin-left: 25px;
+    background: #F83615 0% 0% no-repeat padding-box;
+    border-radius: 9px;
+}
+
+.back {
+    font: normal normal 600 44px/83px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+
+/* summary page css */
+
+.pay_met {
+    font: normal normal 600 35px/35px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.deliber_txt {
+    text-align: left;
+    font: normal normal normal 17px/30px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.our_pr {
+    font: normal normal bold 60px/90px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+
+/* summary page css ends */
+
+
+/* product pages css */
+
+.product_bg {
+    background-color: #F6F6F6;
+    width: 100%;
+}
+
+.product_item {
+    width: auto;
+}
+
+.heart_nggg {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding: 11px;
+    position: relative;
+    top: 10px;
+    border-radius: 50px;
+    float: right;
+    left: -22px;
+}
+
+.heart_nggg_whte {
+    background: #f22806 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding: 11px;
+    position: relative;
+    top: 10px;
+    border-radius: 50px;
+    float: right;
+    left: -22px;
+}
+
+.t_shirt {
+    font: normal normal 300 23px/34px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.redddd {
+    font: normal normal normal 27px/40px Poppins;
+    letter-spacing: 0px;
+    color: #FF0000
+}
+
+.pricee_d {
+    font: normal normal normal 27px/40px Poppins;
+    letter-spacing: 0px;
+    color: #CECECE;
+}
+
+
+/* product csss ends */
+
+
+/* lucky drwa pae csss */
+
+.large_input input {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    padding: 20px;
+    font: normal normal normal 29px/43px Poppins;
+    letter-spacing: 0px;
+    color: #515C6F;
+    opacity: 0.4;
+}
+
+.guess_ {
+    padding-top: 40px;
+}
+
+.gues_winss {
+    background: #363636 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    color: #fff;
+}
+
+.gues {
+    font: normal normal bold 44px/48px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin: 20px 0px 0px 22px;
+}
+
+.gues_winss .spax_t span,
+p {
+    text-align: center;
+    font: normal normal bold 22px/47px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.guess_ .lucky_num li {
+    font: normal normal 600 26px / 50px Poppins;
+    width: 15%;
+    text-align: center;
+}
+
+.pp_1 {
+    text-align: center;
+    font: normal normal bold 39px/47px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.guess_ .hot_deals {
+    width: 70%;
+}
+
+.view {
+    background: #1C2027 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 30px #65719029;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.viewss {
+    text-align: center;
+    font: normal normal normal 21px/21px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    width: 50%;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.view i {
+    position: relative;
+    top: 18px;
+    font-size: 38px;
+}
+
+.views_1 i {
+    position: relative;
+    top: 18px;
+    font-size: 38px;
+}
+
+.view_red i {
+    position: relative;
+    top: 18px;
+    font-size: 38px;
+}
+
+.views_1 {
+    background: #1977f3 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 30px #65719029;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.view_red {
+    background: #f31954 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 30px #65719029;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.lucky_dr {
+    font: normal normal normal 40px/40px Poppins;
+    color: #231F20;
+}
+
+
+/* lucky draw css ends */
+
+
+/* persona; profile page */
+
+#body-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+    background: #FCF5F1 0% 0% no-repeat padding-box;
+    padding: 0;
+}
+
+
+/* Sidebar sizes when expanded and expanded */
+
+.sidebar-expanded {
+    width: auto;
+}
+
+.sidebar-collapsed {
+    width: 60px;
+}
+
+
+/* Menu item*/
+
+#sidebar-container .list-group a {
+    height: 50px;
+    /* color: white; */
+}
+
+
+/* Submenu item*/
+
+#sidebar-container .list-group .sidebar-submenu a {
+    height: 45px;
+    padding-left: 30px;
+}
+
+.sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+
+/* Separators */
+
+.sidebar-separator-title {
+    background-color: #FCF5F1;
+    height: 35px;
+}
+
+.sidebar-separator {
+    background-color: #FCF5F1;
+    height: 25px;
+}
+
+.logo-separator {
+    background-color: #FCF5F1;
+    height: 60px;
+}
+
+
+/* Closed submenu icon */
+
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+    content: " \f0d7";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    padding-left: 10px;
+}
+
+
+/* Opened submenu icon */
+
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+    content: " \f0da";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    padding-left: 10px;
+}
+
+.Profile_pagess .list-group-item {
+    background-color: #fcf5f1;
+    border: 0PX;
+}
+
+.personl_det {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 10px 30px 30px #B1BCC726;
+    border-radius: 20px;
+}
+
+.Profile_pagess .view {
+    background: #f6f5f5 0% 0% no-repeat padding-box;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.Profile_pagess ul {
+    list-style: none;
+}
+
+.personl_det span {
+    text-align: left;
+    font: normal normal bold 25px/28px Poppins;
+    letter-spacing: 0px;
+    color: #2C2543;
+}
+
+.members span {
+    text-align: left;
+    font: normal normal normal 13px/110px Poppins;
+    letter-spacing: 0px;
+    color: #2C2543;
+}
+
+.edit_bt button {
+    background: #F22806 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    border: 0px;
+    margin-top: 37px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.personal {
+    text-align: left;
+    font: normal normal bold 52px/65px Poppins;
+    letter-spacing: 0px;
+    color: #2C2543;
+}
+
+.detail {
+    text-align: left;
+    font: normal normal bold 52px/65px Poppins;
+    letter-spacing: 0px;
+    color: #EC462D;
+}
+
+.form_personal input {
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 13px;
+    border: 0px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.container_1 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container_1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #F22806;
+    border-radius: 50px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container_1 input:checked~.checkmark {
+    background-color: #F22806;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container_1 input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container_1 .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.labels {
+    text-align: left;
+    font: normal normal normal 35px/20px Poppins;
+    letter-spacing: 0px;
+    color: #B4B4B5;
+}
+
+.updste button {
+    background: #262626 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 13px;
+    text-align: left;
+    font: normal normal normal 35px/20px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 35px;
+}
+
+.cK_out .rounded {
+    border-radius: 8.25rem!important;
+}
+
+.chk_inpt input {
+    text-align: center;
+}
+
+.Gn {
+    text-align: left;
+    font: normal normal bold 22px/47px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+
+/* coupons page css */
+
+
+/* farhan css endss */
+
+
+/* .coupons_listPage {} */
+
+.gues_wiin span {
+    font: normal normal bold 45px/48px Poppins;
+    letter-spacing: 0px;
+    color: #4E4C4C;
+}
+
+.appear {
+    text-align: left;
+    font: normal normal normal 20px/23px Poppins;
+    letter-spacing: 0px;
+    color: #ACACAD;
+}
+
+.hood_ck {
+    text-align: center;
+    font: normal normal bold 30px/47px Poppins;
+    letter-spacing: 0.75px;
+    color: #4E4C4C;
+}
+
+.Sequence {
+    text-align: left;
+    font: normal normal normal 24px/100px Poppins;
+    letter-spacing: 0px;
+    color: #ACACAD;
+}
+
+.coupons_listPage .lucky_num li {
+    background: #E4E4E4 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    padding: 5px;
+    width: 10%;
+    text-align: center;
+    font: normal normal 600 26px/47px Poppins;
+    letter-spacing: 0px;
+    color: #ACACAD;
+}
+
+.coupons_list .list-inline-item:not(:last-child) {
+    margin-right: 25px;
+    margin-left: 0px;
+    margin-top: 38px;
+}
+
+.left_coupons {
+    position: absolute;
+    height: 270px;
+    right: -13px;
+    border: 1px solid #303030;
+    background: #303030 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    top: 59px;
+}
+
+.coupons_list2 .list-inline-item:not(:last-child) {
+    margin-right: 8px;
+    margin-top: 38px;
+}
+
+
+/* earned points page */
+
+.avb_pt {
+    text-align: left;
+    font: normal normal bold 52px/58px Poppins;
+    letter-spacing: 0px;
+    color: #2C2543;
+}
+
+.points_av {
+    text-align: left;
+    font: normal normal 300 52px/58px Poppins;
+    letter-spacing: 0px;
+    color: #F22806;
+}
+
+.eded {
+    text-align: center;
+    font: normal normal bold 52px/115px Poppins;
+    letter-spacing: 0px;
+    color: #E3E0E0;
+    opacity: 1;
+}
+
+.earn_points .current_dealSBox {
+    border: 1px solid #e6e5e5;
+    opacity: 1;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 10px #00000061;
+    border-radius: 16px;
+}
+
+.earnd_pt {
+    text-align: left;
+    font: normal normal normal 45px/100px Poppins;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+.earnedd .current_dealSBox {
+    border: 1px solid #e6e5e5;
+    opacity: 1;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 10px #00000061;
+    border-radius: 57px;
+}
+
+.list-group .activee {
+    background: #F22806 0% 0% no-repeat padding-box;
+}
+
+
+/* accordion */
+
+.card {
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1px;
+    border: none;
+}
+
+.card-header:first-child {
+    border-radius: 0;
+}
+
+.card-header {
+    background-color: #f22806;
+    margin-bottom: 0;
+    padding: 20px 1.25rem;
+    border: none;
+}
+
+.lottery_txt {
+    text-align: left;
+    font: normal normal bold 45px/52px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+.Cards .card-header {
+    background-color: #313030;
+    margin-bottom: 0;
+    padding: 20px 1.25rem;
+    border: none;
+}
+
+.term_text {
+    text-align: left;
+    font: normal normal 300 25px/30px Poppins;
+    letter-spacing: 0.25px;
+    color: #313030;
+    opacity: 1;
+}
+
+.inq {
+    text-align: left;
+    font: normal normal 600 30px/30px Poppins;
+    letter-spacing: 0px;
+    color: #313030;
+}
+
+.form_ip input {
+    border: 2px solid #9E9E9E;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.termss {
+    text-align: left;
+    font: normal normal bold 57px/57px Montserrat;
+    letter-spacing: 0px;
+    color: #313030;
+}
+
+.card-header a i {
+    float: left;
+    font-size: 25px;
+    padding: 5px 0;
+    margin: 0 25px 0 0px;
+    color: #195C9D;
+}
+
+.card-header i {
+    float: right;
+    font-size: 34px;
+    margin-top: 8px;
+    color: #fff;
+    border-radius: 44px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 3px solid #FFFFFF;
+}
+
+.card-header a {
+    /* width: 97%; */
+    float: left;
+    text-decoration: none;
+}
+
+.read_comp {
+    text-align: left;
+    font: normal 30px/40px Poppins;
+    letter-spacing: 0px;
+    color: #F92C0B;
+    margin-top: 20px;
+}
+
+.card_head {
+    background-color: #313030;
+    margin-bottom: 0;
+    padding: 20px 1.25rem;
+    border: none;
+}
+
+.card-header p {
+    margin: 0;
+}
+
+.acceprt_btn {
+    background: #F22806 0% 0% no-repeat padding-box;
+    border: 1px solid #F5F5F5;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    font: normal normal 600 35px/45px Poppins;
+    letter-spacing: -0.78px;
+    color: #FFFFFF;
+}
+
+.card-header h3 {
+    margin: 0 0 0px;
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    color: #3fc199;
+}
+
+.card-block {
+    -moz-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 20px;
+    color: #232323;
+    box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px soild #000;
+    border-radius: 0;
+}
+
+.earn_points .card {
+    margin-bottom: 40px;
+}
+
+
+/* ends */
+
+
+/* media; query strtas */
+
+@media only screen and (min-width: 1920px) {
+    .container {
+        max-width: 1680px;
+    }
+    .bg_color {
+        background-color: #FAF7F7;
+    }
+    .desktop_none {
+        display: none;
+        ;
+    }
+    .count_timer .list-inline-item:not(:last-child) {
+        margin-right: 7.5rem;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .count_timer .list-inline-item:not(:last-child) {
+        margin-right: 7.5rem;
+    }
+    .left_txt {
+        font: normal normal bold 20px / 30px Poppins;
+        opacity: 1;
+        top: 256px;
+        right: -44px;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    /* html,
+  body {
+    width: 98% !important;
+  }
+  
+
+  body {
+    overflow-x: hidden !important;
+  } */
+    .My_cls {
+        text-align: center;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h6 {
+        text-align: center !important;
+    }
+    input[type="number"] {
+        padding: 10px 10px 0px 11px;
+        width: 100%;
+    }
+    .Text_para {
+        font: normal 20px Poppins;
+    }
+    .head_text {
+        font: normal normal bold 20px / 20px Poppins;
+    }
+    .left_txt {
+        font: normal normal bold 5px Poppins;
+        top: 323px;
+        right: -31px;
+    }
+    .font_text_sty {
+        font: normal normal 13px Poppins;
+    }
+    .position {
+        display: inline-block;
+        margin-left: 7px;
+    }
+    .digit {
+        width: 100%;
+        font: normal normal 300 16px Poppins;
+    }
+    .text_clr {
+        font: normal normal bold 20px /20px Poppins;
+    }
+    .coming_soon h2 {
+        font: normal normal bold 30px / 26px Poppins;
+    }
+    .bg_clr_hello {
+        padding: 30px !important;
+        text-align: center;
+    }
+    .mobile_app img {
+        margin-top: 20px;
+    }
+    .bg_clr_hello h2 {
+        font: normal normal 600 20px / 39px Poppins;
+        text-align: center;
+    }
+    .coming_soon {
+        padding: 15px;
+    }
+    .downLoad {
+        font: normal normal 600 13px Poppins;
+        margin-top: 22px;
+    }
+    .bg_clr_points h2 {
+        font: normal normal 600 20px / 31px Poppins;
+        text-align: center;
+    }
+    .currnt_deals {
+        padding: 10px 10px 0px 10px;
+    }
+    .currnt_deals h2 {
+        font: normal normal 800 30px Poppins;
+    }
+    .get_chance {
+        font: italic normal normal 14px Poppins;
+        margin-left: 44px;
+    }
+    .get_chance_bld {
+        font: normal 800 14px Poppins;
+        margin-left: 42px;
+    }
+    .buy_Pencil {
+        font: italic normal 600 12px Poppins;
+        margin-left: 39px;
+    }
+    .prize_detail {
+        font: italic normal 11px Poppins;
+        padding: 10px !important;
+    }
+    .mobile_classs {
+        padding: 0px !important;
+        margin-left: 34px;
+    }
+    .closed {
+        font: italic normal 800 18px Poppins;
+    }
+    .closed1 {
+        font: italic normal 800 18px Poppins;
+    }
+    .position_2 {
+        display: inline-block;
+        height: 42px;
+        width: 7px;
+        margin-left: 7px;
+        background: #f22806 0% 0% no-repeat padding-box;
+    }
+    .countDiv:before,
+    .countDiv:after {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        margin-left: -3px;
+        top: 13px;
+        left: 14px;
+        content: "";
+        text-align: center;
+        letter-spacing: 0px;
+        opacity: 1;
+        background-color: #ffffff;
+        font-size: 21px;
+    }
+    .my_page {
+        padding: 0px !important;
+    }
+    .timer_left_deals {
+        position: absolute;
+        height: 210px;
+        left: -10px;
+        top: 140px;
+    }
+    .ctimer_deals {
+        bottom: 0px;
+        padding: 0px !important;
+    }
+    .neww .list-inline-item:not(:last-child) {
+        margin-right: 13px;
+    }
+    .goldd {
+        font: italic normal 600 18px / 10px Montserrat;
+    }
+    .goldd2 {
+        font: italic normal 800 30px / 57px Montserrat;
+    }
+    .deals_pad_mb {
+        padding: 24px !important;
+    }
+    .get_chance_bld_new {
+        font: normal 800 14px Poppins;
+        margin-left: 0px;
+    }
+    .buy_Pencil_2 {
+        font: italic normal 600 11px Poppins;
+        margin-left: 39px;
+    }
+    .margin_tp {
+        margin-top: 70px !important;
+    }
+    .cell_img {
+        margin-left: 25px;
+    }
+    .get_chance1 {
+        font: italic normal normal 14px Poppins;
+        letter-spacing: 0px;
+    }
+    /* input[type="number"] {
+        height: 100%;
+    } */
+    .hurry {
+        font: bold 12px Poppins;
+    }
+    .sec .list-inline-item:not(:last-child) {
+        margin-right: 25px;
+    }
+    .md_class {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        width: 100%;
+    }
+    .ctimer_1 {
+        padding: 10px !important;
+    }
+    .PL_ends {
+        padding: 10px !important;
+    }
+    .digit {
+        width: 100%;
+        font: normal normal 300 14px Poppins;
+    }
+    .position3 {
+        background: #f22806 0% 0% no-repeat padding-box;
+    }
+    .position {
+        background: #f22806 0% 0% no-repeat padding-box;
+    }
+    .winners {
+        font: italic normal 900 30px / 86px Montserrat;
+    }
+    .winner_bg {
+        padding: 27px;
+    }
+    .winn {
+        font: normal normal normal 13px / 31px Poppins;
+    }
+    .boxx h3 {
+        font: italic normal 900 16px / 30px Montserrat;
+    }
+    .winn_gold {
+        font: normal normal bold 20px Poppins;
+    }
+    .chance {
+        font: italic normal normal 16px Poppins;
+    }
+    .position_4 {
+        font-size: 4px;
+    }
+    .download_app img {
+        width: 50%;
+        text-align: center;
+    }
+    .mobile_bttn img {
+        text-align: center;
+    }
+    .position {
+        height: 42px;
+        position: relative;
+        width: 15px;
+    }
+    .how_works {
+        font: normal normal bold 16px/25px Poppins;
+    }
+    /* page 3 css */
+    .apple_bold {
+        text-align: center;
+        font: italic normal 500 27px Poppins;
+        color: #303030;
+        margin-left: 10px !important;
+    }
+    .guess_three_page .get_chance {
+        font: italic normal normal 22px Poppins;
+        margin-left: -11px;
+    }
+    .get_a_chance {
+        font: italic normal 600 23px Poppins;
+        letter-spacing: 0px;
+        color: #303030;
+        opacity: 1;
+    }
+    .right_Aed {
+        font: normal normal 800 41px/100px Poppins;
+    }
+    .hoodie {
+        font: normal normal bold 30px/50px Poppins;
+    }
+    .hoodie_sp {
+        font: normal normal 300 23px/50px Poppins;
+    }
+    .counter_price {
+        font: normal normal 800 50px/100px Poppins;
+    }
+    .guesswinn {
+        border-radius: 37px 37px;
+    }
+    .try_luck1 {
+        font: italic normal 29px/50px Poppins;
+    }
+    .shop_txt {
+        font: normal normal 600 24px/28px Poppins;
+    }
+    .shop_txt1 {
+        font: normal normal 300 24px/40px Poppins;
+    }
+    #nav-tab a {
+        font-size: 15px;
+    }
+    .price_1 {
+        font: normal normal bold 34px/45px Poppins;
+    }
+    .hot_deals {
+        margin-bottom: 16px;
+    }
+    #tabs_sec .nav-tabs {
+        border-bottom: 0px;
+        width: 100%;
+        font: normal normal 600 17px/28px Poppins;
+    }
+    #tabs_sec .container {
+        padding: 43px !important;
+    }
+    .hurry_upp {
+        text-align: center;
+        font: normal normal bold 20px/26px Poppins;
+    }
+    .lucky_num_1 {
+        font: normal normal 600 25px / 102px Poppins;
+    }
+    .try_luck1 {
+        font: italic normal 20px/40px Poppins;
+    }
+    .aed12 {
+        font: italic normal 800 38px /46px Montserrat;
+    }
+    .worth_dollar {
+        font: italic normal 600 19px/50px Montserrat;
+    }
+    .closes {
+        font: normal normal 800 39px/40px Poppins;
+    }
+    .guess_dealSBox2 {
+        border-radius: 37px 37px;
+    }
+    /* page 2 css */
+    .select_text {
+        font: normal 35px/79px Poppins;
+    }
+    .lucky_num li {
+        border-radius: 5px;
+        opacity: 1;
+        color: #ffff;
+        padding: 5px;
+        font: normal normal 600 24px / 56px Poppins;
+        width: 10%;
+        text-align: center;
+    }
+    /* page 4 css */
+    .size_txt {
+        font: normal normal normal 40px/78px Poppins;
+    }
+    .form_seclect {
+        font: normal normal bold 39px/81px Poppins;
+        width: 22%;
+        text-align: center;
+    }
+    .lucky_draw {
+        font: italic normal 800 25px/59px Poppins;
+    }
+    .clear_all button {
+        font: normal normal 200 30px/83px Poppins;
+        text-align: center;
+    }
+    .inner span {
+        font: italic normal bold 40px/50px Poppins;
+    }
+    div.inner {
+        left: 8%;
+        padding: 2rem;
+    }
+    /* current_deals sec */
+    .deal_3 #tabs_sec .container {
+        padding: 35px !important;
+    }
+    .deal_3 .cell_color {
+        width: 100% !important;
+    }
+    .Closing_in {
+        font: italic normal 900 39px/79px Montserrat;
+    }
+    .checkround {
+        left: 223px;
+    }
+    .prducts_txt span {
+        font: normal normal bold 18px/16px Poppins;
+    }
+    .aed_dolar span {
+        font: normal normal bold 21px/43px Poppins;
+    }
+    .radio input {
+        position: inherit;
+        margin-bottom: 40px;
+    }
+    .input_lebele label {
+        font: normal normal 600 24px Poppins;
+    }
+    .save_add input {
+        height: 50px;
+        margin-left: 32px;
+    }
+    .check_outtt button {
+        width: 100%;
+    }
+    .check_outtt1 button {
+        margin-top: 25px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .aed_dolarsss {
+        text-align: left;
+        font: normal normal bold 18px/50px Poppins;
+    }
+    .credit_txt {
+        font: normal normal 600 30px/47px Poppins;
+        letter-spacing: 0px;
+        color: #3B3A3A;
+        opacity: 1;
+    }
+    .frm_gr label {
+        font: normal normal normal 40px/59px Poppins;
+    }
+    .frm_gr input {
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: #DDDDDD;
+        width: 100%;
+        font: normal normal normal 39px/60px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+        font-size: 28px;
+    }
+    .pay_now .check_outtt1 button {
+        font: normal normal 600 23px/34px Poppins;
+        margin-left: 0px;
+    }
+    .sec_arr {
+        padding-top: 10px;
+    }
+    .save_card {
+        font: normal normal normal 35px/21px Poppins;
+    }
+    .frm_gr img {
+        position: absolute;
+        bottom: 257px;
+        right: 0px;
+        width: 94px;
+        z-index: 111;
+    }
+    .our_pr {
+        font: normal normal bold 37px/58px Poppins;
+    }
+    .redddd {
+        text-align: left;
+    }
+    .labels {
+        font: normal normal normal 27px/20px Poppins;
+    }
+    .updste button {
+        font: normal normal normal 29px/12px Poppins;
+    }
+    .cell_respons {
+        text-align: center;
+    }
+    .ear_pts {
+        text-align: center;
+    }
+    .avb_pt {
+        text-align: left;
+        font: normal normal bold 35px Poppins;
+    }
+    .points_av {
+        text-align: left;
+        font: normal normal 300 35px/33px Poppins;
+    }
+    .eded {
+        text-align: center;
+        font: normal normal bold 39px/75px Poppins;
+    }
+    .earnd_pt {
+        font: normal normal normal 30px/71px Poppins;
+    }
+    .lottery_txt {
+        font: normal normal bold 20px/14px Poppins;
+        margin-left: 16px;
+    }
+    .termss {
+        font: normal normal bold 37px/46px Montserrat;
+    }
+    .term_text {
+        text-align: center;
+        font: normal normal 300 16px/21px Poppins;
+    }
+    .personal {
+        font: normal normal bold 46px Poppins;
+    }
+    .detail {
+        font: normal normal bold 45px Poppins;
+    }
+    .termssss {
+        text-align: center;
+    }
+    .view {
+        background: #1C2027 0% 0% no-repeat padding-box;
+        width: 50px;
+        height: 50px;
+    }
+    .view i {
+        position: relative;
+        top: 12px;
+        font-size: 26px;
+    }
+    .views_1 {
+        background: #1977f3 0% 0% no-repeat padding-box;
+        width: 50px;
+        height: 50px;
+    }
+    .view_red {
+        background: #f31954 0% 0% no-repeat padding-box;
+        width: 50px;
+        height: 50px;
+    }
+    .views_1 i {
+        position: relative;
+        top: 12px;
+        font-size: 26px;
+    }
+    .view_red i {
+        position: relative;
+        top: 12px;
+        font-size: 26px;
+    }
+    .gues {
+        font: normal normal bold 38px/53px Poppins;
+    }
+    .lucky_dr {
+        font: normal normal normal 13px/26px Poppins;
+    }
+    .cell_rp {
+        margin-top: 20px;
+    }
+    .centerr_mb {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    .div_timer {
+        font: normal normal bold 8px / 10px Poppins;
+        width: 100%;
+    }
+    .get_chance_one {
+        font: italic normal bold 12px Poppins;
+    }
+    .share_left i {
+        font-size: 19px;
+    }
+    .buy_Pencil {
+        font: italic normal 600 9px Poppins;
+    }
+    .timer_left {
+        padding: 1px !important;
+    }
+    .timer_left {
+        position: absolute;
+        left: 15px;
+        height: 153px;
+        opacity: 1;
+    }
+    .timer_left_deals {
+        position: absolute;
+        height: 154px;
+        left: -10px;
+        top: 140px;
+        width: 20%;
+        text-align: center;
+    }
+    .aed {
+        font: italic normal bold 9px Poppins;
+    }
+    .deal_btn {
+        width: 100%;
+        margin-top: 19px;
+    }
+    .mobile_classs {
+        padding: 0px !important;
+        margin-left: 30px;
+    }
+    .ctimer {
+        opacity: 1;
+        font-size: 6px;
+        width: 100%;
+        padding: 0px !important;
+    }
+    .winn_gold {
+        font: normal normal bold 13px Poppins;
+    }
+    .foote_bottom_ul_amrc img {
+        width: 10px;
+    }
+    .My_cls {
+        text-align: center !important;
+    }
+    .my_cont {
+        margin: 0px !important;
+    }
+    .Text_para {
+        font: normal 15px Poppins;
+        text-align: center;
+    }
+    .head_text {
+        font: normal normal bold 14px / 12px Poppins;
+    }
+    .text_clr {
+        font: normal normal bold 15px /20px Poppins;
+    }
+    #tabs_sec .container {
+        padding: 24px !important;
+    }
+    .lucky_num_1 {
+        font: normal normal 600 20px / 60px Poppins;
+    }
+    .guess_three_page .get_chance {
+        font: italic normal normal 14px Poppins;
+        margin-left: 13px;
+        padding: 0px !important;
+    }
+    .apple_bold {
+        font: italic normal 500 24px Poppins;
+    }
+    .right_Aed {
+        font: normal normal 800 26px/110px Poppins;
+    }
+    .hoodie {
+        font: normal normal bold 20px/30px Poppins;
+    }
+    #nav-tab a {
+        margin-left: 0px !important;
+    }
+    .hoodie_sp {
+        font: normal normal 300 15px/38px Poppins;
+    }
+    .counter_price {
+        font: normal normal 800 38px/64px Poppins;
+    }
+    .closes {
+        font: normal normal 800 30px/20px Poppins;
+    }
+    .view_detail {
+        width: 100%;
+    }
+    .hot_deals {
+        width: 100%;
+    }
+    .headin5_amrc {
+        font: normal normal 900 16px/29px Poppins;
+    }
+    .select_text {
+        font: normal 20px/53px Poppins;
+    }
+    .Guess_win .list-inline-item:not(:last-child) {
+        margin-right: -0.5rem;
+    }
+    .lucky_num li {
+        font: normal normal 600 13px / 31px Poppins;
+        width: 20%;
+    }
+    .try_luck {
+        font: normal normal bold 22px/33px Poppins;
+    }
+    .aed12 {
+        font: italic normal 800 25px /46px Montserrat;
+    }
+    .worth_dollar {
+        font: italic normal 600 15px/50px Montserrat;
+    }
+    .guess_four .apple_bold {
+        font: italic normal 500 16px Poppins;
+    }
+    .guess_four .get_a_chance {
+        font: italic normal 600 17px Poppins;
+    }
+    .guess_four .right_Aed {
+        font: normal normal 800 26px/100px Poppins;
+        float: initial;
+    }
+    .size_txt {
+        font: normal normal normal 24px/76px Poppins;
+    }
+    .form_seclect {
+        font: normal normal bold 29px/65px Poppins;
+        width: 20%;
+        text-align: center;
+    }
+    .cell_color {
+        padding: 12px !important;
+        width: 100% !important;
+    }
+    .lucky_draw {
+        font: italic normal 800 15px/42px Poppins;
+    }
+    .clear_all button {
+        font: normal normal 200 19px/64px Poppins;
+        float: right;
+    }
+    .btn_lucky button {
+        font: normal normal 600 24px/45px Poppins;
+    }
+    .checkround {
+        left: 120px;
+    }
+    .cart_sh {
+        font: normal normal 600 17px Poppins;
+    }
+    .save_add input {
+        height: 50px;
+        margin-top: 51px;
+        margin-left: 0px;
+    }
+    .save_card {
+        font: normal normal normal 19px/14px Poppins;
+    }
+    .frm_gr label {
+        font: normal normal normal 32px/59px Poppins;
+    }
+    .frm_gr input {
+        font: normal normal normal 24px/51px Poppins;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1366px) {
+    .head_text {
+        font: normal normal bold 29px/50px Poppins;
+    }
+    .text_clr {
+        font: normal normal bold 29px/40px Poppins;
+    }
+    .left_txt {
+        font: normal normal bold 12px Poppins;
+        right: -49px;
+    }
+    .coming_soon h2 {
+        font: normal normal bold 69px/60px Poppins;
+        letter-spacing: 2.8px;
+    }
+    .deal_btn {
+        width: 50%;
+        margin-top: 18px;
+    }
+    .bg_clr_hello h2 {
+        font: normal normal 600 39px/51px Poppins;
+    }
+    .bg_clr_points h2 {
+        font: normal normal 600 39px/49px Poppins;
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+    .currnt_deals h2 {
+        font: normal normal 800 68px/99px Poppins;
+    }
+    .mobile_classs {
+        float: none;
+    }
+    .get_chance {
+        font: italic normal normal 30px Poppins;
+    }
+    .prize_detail {
+        font: italic normal 22px Poppins;
+        text-align: center;
+    }
+    .position_2 {
+        height: 42px;
+        width: 30px;
+    }
+    .closed {
+        font: italic normal 800 30px Poppins;
+        opacity: 1;
+    }
+    .neww .list-inline-item:not(:last-child) {
+        margin-right: 15px;
+    }
+    .sec .list-inline-item:not(:last-child) {
+        margin-right: 30px;
+    }
+    .winners {
+        font: italic normal 900 63px/70px Montserrat;
+    }
+    .winn {
+        font: normal normal normal 22px / 35px Poppins;
+    }
+    .boxx {
+        opacity: 1;
+        margin-top: 35px;
+    }
+    .currnt_deals {
+        padding: 16px 19px;
+    }
+    #left_img {
+        display: none;
+    }
+    .right_Aed {
+        font: normal normal 800 60px/120px Poppins;
+    }
+    .guess_three_page .get_chance {
+        font: italic normal normal 30px Poppins;
+        padding: 10px !important;
+    }
+    .hoodie_sp {
+        font: normal normal 300 32px/57px Poppins;
+    }
+    .counter_price {
+        font: normal normal 800 50px Poppins;
+    }
+    .guesswinn {
+        border-radius: 37px 37px;
+        box-shadow: 0px 3px 10px #00000052;
+    }
+    .try_luck1 {
+        font: italic normal 30px/120px Poppins;
+    }
+    .guess_dealSBox2 {
+        border-radius: 37px 37px;
+    }
+    .shop_txt {
+        font: normal normal 600 26px/36px Poppins;
+    }
+    .shop_txt1 {
+        font: normal normal 300 25px Poppins;
+    }
+    .price_1 {
+        font: normal normal bold 32px/45px Poppins;
+    }
+    .view_detail {
+        width: 100%;
+    }
+    .hot_deals {
+        width: 100%;
+    }
+    .aed12 {
+        font: italic normal 800 45px /55px Montserrat;
+    }
+    .size_txt {
+        font: normal normal normal 37px/41px Poppins;
+    }
+    .cell_color {
+        width: 100% !important;
+    }
+    .form_seclect {
+        font: normal normal bold 39px/44px Poppins;
+        width: 40%;
+        text-align: center;
+    }
+    .size_txt i {
+        line-height: 45px;
+    }
+    .form_seclect_2 {
+        border: 0px;
+        font: normal normal bold 25px/41px Poppins;
+        width: 16%;
+    }
+    .span_texts input {
+        text-align: center;
+        font: normal normal 600 26px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+    .lucky_draw {
+        font: italic normal 800 21px/30px Poppins;
+    }
+    .clear_all button {
+        font: normal normal 200 18px/67px Poppins;
+    }
+    .form-control {
+        padding: 0px;
+        width: 50%;
+    }
+    .btn_lucky button {
+        font: normal normal 600 26px/51px Poppins;
+        margin: 10px 10px 10px 10px;
+    }
+    div.inner {
+        left: 33%;
+        bottom: -40px;
+    }
+    .inner span {
+        font: italic normal bold 35px/90px Poppins;
+        text-align: center;
+    }
+    .lucky_num_1 {
+        padding: 5px;
+        font: normal normal 600 27px / 63px Poppins;
+    }
+    .guess_four .try_luck1 {
+        font: italic normal 19px/57px Poppins;
+    }
+    .font_text_sty {
+        font: normal normal 20px Poppins;
+    }
+    .try_luck1 {
+        font: italic normal 20px/62px Poppins;
+    }
+    .aed_dolar span {
+        font: normal normal bold 25px/43px Poppins;
+    }
+    .table_clr th {
+        text-align: left;
+        font: normal normal 600 13px/22px Poppins;
+    }
+    .prducts_txt span {
+        font: normal normal bold 23px/31px Poppins;
+    }
+    .bg_brdrr p {
+        font: normal normal 600 13px/13px Poppins;
+        letter-spacing: 0px;
+    }
+    .checkround {
+        position: absolute;
+        top: 13px;
+        left: 55px;
+    }
+    .aed_dolarsss {
+        font: normal normal bold 20px Poppins;
+    }
+    .h2_head {
+        font: normal normal 600 11px/6px Poppins;
+    }
+    .tc {
+        font: normal normal 300 18px/39px Poppins;
+    }
+    .pricee {
+        font: normal normal 600 18px/38px Poppins;
+    }
+    .save_add input {
+        height: 50px;
+        margin-top: 51px;
+    }
+    .check_outtt1 button {
+        padding: 18px;
+        margin-left: 173px;
+    }
+    .closes {
+        font: normal normal 800 35px/48px Poppins;
+    }
+    .credit_txt {
+        font: normal normal 600 30px/35px Poppins;
+        width: 96%;
+    }
+    .frm_gr label {
+        font: normal normal normal 43px/90px Poppins;
+    }
+    input {
+        font: normal normal normal 53px/76px Poppins;
+        letter-spacing: 0px;
+    }
+    .frm_gr img {
+        position: absolute;
+        bottom: 225px;
+        right: 0px;
+        z-index: 1;
+    }
+    .check_out .table td,
+    .table th {
+        padding: 0.75rem;
+        vertical-align: middle;
+        border: 0px;
+        text-align: center;
+    }
+    .check_outtt23 button {
+        font: normal normal 600 15px/34px Poppins;
+        width: auto;
+    }
+    .pay_now .check_outtt1 button {
+        width: 100%;
+    }
+    .form_personal input {
+        width: 100%;
+    }
+    .members span {
+        font: normal normal normal 9px/37px Poppins;
+    }
+    .deals_pad_mb {
+        padding: 0px !important;
+    }
+    .get_chance1 {
+        font: italic normal normal 19px / 52px Poppins;
+    }
+    .mbsss {
+        padding: 0px;
+        font-size: 8px;
+        position: relative;
+        bottom: 46px;
+    }
+    .lottery_txt {
+        font: normal normal bold 31px/52px Poppins;
+    }
+}

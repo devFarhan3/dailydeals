@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Helvetica");
+Body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica;
+}
+
+.register-photo {
+    /* background: #f1f7fc; */
+    padding: 80px 0;
+    background-color: #ffeeee;
+}
+
+
+/* .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url("../imgs/sign_in.PNG");
+  background-size: cover;
+} */
+
+.register-photo .form-container {
+    display: table;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* .register-photo form {
+  padding: 18px 50px;
+  color: #505e6c;
+} */
+
+
+/* @media (max-width: 991px) {
+  .register-photo form {
+    padding: 40px;
+  }
+} */
+
+.register-photo form h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.dashed label {
+    letter-spacing: 5px;
+}
+
+.button_FB {
+    background-color: #3c5a99;
+    background-color: #3c5a99;
+    border-radius: 7px;
+    color: #fff;
+    padding: 7px 30px 7px 30px;
+}
+
+.register-photo form .form-control {
+    background: transparent;
+    border: 1px solid #cbd1d8;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 0px;
+    height: 45px;
+    width: 90%;
+}
+
+.form-group label {
+    color: #adb6c1;
+}
+
+.register-photo form .form-check {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.register-photo .btn-success {
+    color: #fff;
+    background-color: #2e384d;
+    border-color: #2e384d;
+    width: 90%;
+    height: 45px;
+}
+
+.Sign_in_page .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 0px;
+}
+
+.button_FB {
+    background-color: #3c5a99;
+    background-color: #3c5a99;
+    border-radius: 7px;
+    color: #fff;
+    padding: 7px 30px 7px 30px;
+    text-align: center;
+}
+
+.button_gps {
+    background-color: #f83615;
+    background-color: #f83615;
+    border-radius: 7px;
+    color: #fff;
+    padding: 7px 30px 7px 30px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+
+/* sign in page css ends */
+
+.register-photo {
+    /* background: #f1f7fc; */
+    padding: 80px 0;
+}
+
+.register-photo form h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.sign_up {
+    background-color: #ffeeee;
+}
+
+.register-photo form .form-check {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+/* .register-photo form .btn-primary:hover,
+.register-photo form .btn-primary:active {
+  background: green
+}
+
+.register-photo form .btn-primary:active {
+  transform: translateY(1px)
+} */
+
+.register-photo form .already {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #6f7a85;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.sign_up .btn-reds {
+    color: #fff;
+    background-color: #f83615;
+    border-color: #f83615;
+    width: 100%;
+    height: 45px;
+}
+
+
+/* sign Up page css strts */
+
+.sign_IN .btn-success {
+    color: #fff;
+    background-color: #2e384d;
+    border-color: #2e384d;
+}
+
+.sign_IN {
+    background-color: #ffeeee;
+}
+
+.input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+
+/* media query */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .button_FB {
+        margin-left: 0px !important;
+        width: 100%;
+    }
+    .button_gps {
+        margin-left: 0px !important;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 600px) {}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
